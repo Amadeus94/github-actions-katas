@@ -18,10 +18,10 @@ jobs:
     needs: Clone-down
     steps:
      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with: 
-            name: code
-            path: .
+       uses: actions/download-artifact@v2
+       with: 
+        name: code
+        path: .
      - name: Build application
         run: chmod +x ci/build-app.sh && ci/build-app.sh
       - name: Test
